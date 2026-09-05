@@ -1,0 +1,63 @@
+# Java / Maven (Spring Boot)
+backend/mplad-backend/target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+hs_err_pid*
+
+# Python / FastAPI / scikit-learn
+ai-model/.venv/
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Local environment and secret-bearing configuration
+.env
+.env.*
+!.env.example
+backend/mplad-backend/src/main/resources/application.properties
+backend/mplad-backend/src/main/resources/application-local.properties
+backend/mplad-backend/src/main/resources/application-local.yml
+backend/mplad-backend/src/main/resources/application-local.yaml
+
+# IDEs and editors
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+*.code-workspace
+
+# Windows / OS files
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Temporary and backup files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MPLAD Monitor dashboard with illustrative project monitoring data."
+    />
+    <title>Dashboard | MPLAD Monitor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dashboard-page">
+    <header class="dashboard-header">
+      <a class="brand" href="index.html"
+        ><span class="brand-mark" aria-hidden="true">M</span
+        ><span>MPLAD <strong>Monitor</strong></span></a
+      >
+      <nav aria-label="Dashboard navigation">
+        <a class="active" href="#overview">Overview</a
+        ><a href="#projects">Projects</a><a href="#alerts">Alerts</a>
+      </nav>
+      <div class="profile">
+        <span class="avatar" aria-hidden="true">RO</span
+        ><span><b>Review Officer</b><small>Demo account</small></span
+        ><a class="back-link" href="index.html" aria-label="Return to home"
+          >←</a
+        >
+      </div>
+    </header>
+    <main class="dashboard-main">
+      <section class="dashboard-title" id="overview">
+        <div>
+          <p class="eyebrow">Monitoring dashboard</p>
+          <h1>Portfolio overview</h1>
+          <p>
+            Illustrative data only — not a record of actual MPLAD projects or
+            fraud findings.
+          </p>
+        </div>
+        <span class="snapshot">Sample snapshot · 05 Sep 2026</span>
+      </section>
+      <section
+        class="stat-grid"
+        id="summaryCards"
+        aria-label="Portfolio summary"
+      ></section>
+      <section class="risk-overview">
+        <div>
+          <p class="eyebrow">AI risk assessment · demo</p>
+          <h2>Moderate attention required</h2>
+          <p>
+            This preview models how future AI signals may help teams prioritise
+            review. It does not make fraud determinations.
+          </p>
+          <div class="risk-metrics">
+            <span
+              ><b id="overallRiskScore">62</b
+              ><small>risk score / 100</small></span
+            ><span
+              ><b id="anomalyCount">8</b><small>sample anomalies</small></span
+            >
+          </div>
+        </div>
+        <div class="risk-gauge" aria-label="Demo risk score 62 out of 100">
+          <div class="gauge-value">62<span>/100</span></div>
+          <p>Moderate risk</p>
+        </div>
+      </section>
+      <section class="analytics-grid" aria-label="Sample data visualizations">
+        <article class="chart-card">
+          <div class="card-heading">
+            <h2>Project status</h2>
+            <span>Demo portfolio</span>
+          </div>
+          <div id="statusChart" class="bar-chart"></div>
+        </article>
+        <article class="chart-card">
+          <div class="card-heading">
+            <h2>Risk distribution</h2>
+            <span>By project count</span>
+          </div>
+          <div id="riskChart" class="bar-chart"></div>
+        </article>
+        <article class="chart-card">
+          <div class="card-heading">
+            <h2>Budget vs expenditure</h2>
+            <span>₹ lakh</span>
+          </div>
+          <div id="budgetChart" class="comparison-chart"></div>
+        </article>
+      </section>
+      <section class="projects-section" id="projects">
+        <div class="section-row">
+          <div>
+            <p class="eyebrow">Project register</p>
+            <h2>Monitor projects</h2>
+          </div>
+          <span id="visibleCount" class="count-label">0 projects shown</span>
+        </div>
+        <div class="filters" aria-label="Filter projects">
+          <label class="search-field"
+            ><span class="sr-only">Search projects</span
+            ><input
+              id="projectSearch"
+              type="search"
+              placeholder="Search ID, project, or location" /></label
+          ><label
+            ><span class="sr-only">Filter by status</span
+            ><select id="statusFilter">
+              <option value="all">All statuses</option>
+              <option>Completed</option>
+              <option>In Progress</option>
+              <option>Delayed</option>
+              <option>Not Started</option>
+            </select></label
+          ><label
+            ><span class="sr-only">Filter by risk level</span
+            ><select id="riskFilter">
+              <option value="all">All risk levels</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+              <option>Critical</option>
+            </select></label
+          ><label
+            ><span class="sr-only">Filter by category</span
+            ><select id="categoryFilter">
+              <option value="all">All categories</option>
+            </select></label
+          >
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Project</th>
+                <th>Location</th>
+                <th>Category</th>
+                <th>Allocation</th>
+                <th>Expenditure</th>
+                <th>Status</th>
+                <th>Risk</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="projectsTableBody"></tbody>
+          </table>
+        </div>
+        <p id="emptyState" class="empty-state" hidden>
+          No demo projects match these filters.
+        </p>
+      </section>
+      <section class="alerts-section" id="alerts">
+        <div class="section-row">
+          <div>
+            <p class="eyebrow">Review queue</p>
+            <h2>Sample anomaly alerts</h2>
+          </div>
+          <span class="demo-tag">Demo alerts</span>
+        </div>
+        <p class="section-intro">
+          These illustrative signals require human review; they are not verified
+          fraud cases.
+        </p>
+        <div id="alertsList" class="alerts-list"></div>
+      </section>
+    </main>
+    <div
+      id="projectModal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      hidden
+    >
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-content">
+        <button class="modal-close" data-close-modal aria-label="Close details">
+          ×
+        </button>
+        <p class="eyebrow">Demo project detail</p>
+        <h2 id="modalTitle"></h2>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
