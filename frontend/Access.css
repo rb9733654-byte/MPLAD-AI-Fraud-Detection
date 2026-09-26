@@ -1,0 +1,945 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #12366f;
+    --dark-navy: #0c2854;
+
+    --blue: #1769e8;
+    --green: #19b47a;
+    --purple: #7050dc;
+
+    --saffron: #ff9933;
+
+    --text: #18345f;
+    --muted: #536b8d;
+
+    --white: #ffffff;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+
+    min-height: 100vh;
+
+    color: var(--text);
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 35%,
+            rgba(65, 153, 255, 0.18),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 30%,
+            rgba(47, 211, 175, 0.13),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f9fcff 0%,
+            #edf6ff 50%,
+            #f5fbff 100%
+        );
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.background-glow {
+    position: fixed;
+
+    border-radius: 50%;
+
+    filter: blur(50px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.glow-left {
+    width: 350px;
+    height: 350px;
+
+    left: -180px;
+    top: 250px;
+
+    background: rgba(43, 135, 255, 0.12);
+}
+
+
+.glow-right {
+    width: 400px;
+    height: 400px;
+
+    right: -200px;
+    bottom: -150px;
+
+    background: rgba(31, 179, 150, 0.10);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    padding: 27px 5.5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.emblem {
+    width: 66px;
+    height: 70px;
+
+    border-right: 2px solid #7994ba;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--navy);
+
+    font-size: 38px;
+}
+
+
+.brand-text h1 {
+    font-size: 40px;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    color: var(--navy);
+}
+
+
+.brand-text p {
+    margin-top: 4px;
+
+    font-size: 16px;
+
+    color: #18345f;
+}
+
+
+/* Tricolor */
+
+.tricolor-line {
+    width: 90px;
+
+    height: 4px;
+
+    display: flex;
+}
+
+
+.tricolor-line span {
+    flex: 1;
+}
+
+
+.saffron {
+    background: #ff9933;
+}
+
+
+.white {
+    background: #ffffff;
+}
+
+
+.green {
+    background: #138808;
+}
+
+
+/* Header tagline */
+
+.header-tagline {
+    display: flex;
+
+    gap: 20px;
+
+    color: #24508b;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+.header-tagline span:not(:last-child)::after {
+    content: "|";
+
+    margin-left: 20px;
+
+    color: #8aa5c8;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main-container {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1250px;
+
+    margin: 28px auto 0;
+
+    padding: 0 25px 45px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.welcome-section {
+    margin-bottom: 35px;
+}
+
+
+.welcome-label {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+.welcome-label span {
+    width: 60px;
+
+    height: 2px;
+
+    background: #8ca6c9;
+}
+
+
+.welcome-label p {
+    font-size: 15px;
+
+    letter-spacing: 5px;
+
+    font-weight: 600;
+
+    color: #41689b;
+}
+
+
+.welcome-section h2 {
+    font-size: 45px;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    color: var(--navy);
+}
+
+
+.subtitle {
+    margin-top: 15px;
+
+    font-size: 20px;
+
+    color: var(--muted);
+}
+
+
+/* =========================================
+   SEPARATOR
+========================================= */
+
+.separator {
+    display: flex;
+
+    width: 155px;
+
+    height: 4px;
+
+    margin: 25px auto 0;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+
+.separator span {
+    flex: 1;
+}
+
+
+.separator-saffron {
+    background: var(--saffron);
+}
+
+
+.separator-white {
+    background: #a6bdd9;
+}
+
+
+.separator-green {
+    background: #139b67;
+}
+
+
+/* =========================================
+   ACCESS CARDS
+========================================= */
+
+.access-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+
+    max-width: 1080px;
+
+    margin: auto;
+}
+
+
+.access-card {
+    position: relative;
+
+    min-height: 430px;
+
+    padding: 32px;
+
+    text-align: left;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.92),
+            rgba(255,255,255,0.64)
+        );
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(100,150,220,0.35);
+
+    box-shadow:
+        0 12px 30px rgba(35,90,150,0.09);
+
+    transition:
+        transform 0.35s cubic-bezier(.2,.8,.2,1),
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* =========================================
+   HOVER POP EFFECT
+========================================= */
+
+.access-card:hover {
+    transform:
+        translateY(-12px)
+        scale(1.025);
+}
+
+
+/* Authority hover */
+
+.access-card.authority:hover {
+    border-color: rgba(23,105,232,0.65);
+
+    box-shadow:
+        0 25px 55px rgba(23,105,232,0.20),
+        0 0 25px rgba(23,105,232,0.08);
+}
+
+
+/* Contractor hover */
+
+.access-card.contractor:hover {
+    border-color: rgba(25,180,122,0.65);
+
+    box-shadow:
+        0 25px 55px rgba(25,180,122,0.20),
+        0 0 25px rgba(25,180,122,0.08);
+}
+
+
+/* Public hover */
+
+.access-card.public:hover {
+    border-color: rgba(112,80,220,0.65);
+
+    box-shadow:
+        0 25px 55px rgba(112,80,220,0.20),
+        0 0 25px rgba(112,80,220,0.08);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   CARD ICON
+========================================= */
+
+.card-icon {
+    width: 82px;
+    height: 82px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 34px;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+.access-card:hover .card-icon {
+    transform:
+        scale(1.10)
+        rotate(-3deg);
+}
+
+
+/* Authority */
+
+.authority .card-icon {
+    background:
+        linear-gradient(
+            135deg,
+            #2783ef,
+            #125cd1
+        );
+
+    box-shadow:
+        0 10px 25px rgba(23,105,232,0.25);
+}
+
+
+/* Contractor */
+
+.contractor-helmet-icon {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.card-icon .contractor-helmet-icon { width: 30px; height: 30px; color: #fff; }
+.card-decoration .contractor-helmet-icon { width: 1em; height: 1em; }
+.contractor-arrow-icon {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex: 0 0 auto;
+}
+
+.contractor .card-icon {
+    background:
+        linear-gradient(
+            135deg,
+            #28c58a,
+            #119a67
+        );
+
+    box-shadow:
+        0 10px 25px rgba(25,180,122,0.25);
+}
+
+
+/* Public */
+
+.public .card-icon {
+    background:
+        linear-gradient(
+            135deg,
+            #8566ed,
+            #5d40c9
+        );
+
+    box-shadow:
+        0 10px 25px rgba(112,80,220,0.25);
+}
+
+
+/* =========================================
+   TOP ARROW
+========================================= */
+
+.top-arrow {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,0.65);
+
+    color: #2876d9;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.access-card:hover .top-arrow {
+    transform:
+        translateX(5px)
+        rotate(-10deg);
+}
+
+
+.contractor .top-arrow {
+    color: #16a873;
+}
+
+
+.public .top-arrow {
+    color: #7150dc;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.card-content {
+    margin-top: 28px;
+}
+
+
+.card-content h3 {
+    font-size: 28px;
+
+    color: #122d58;
+
+    margin-bottom: 13px;
+
+    font-weight: 700;
+}
+
+
+.card-content p {
+    max-width: 280px;
+
+    min-height: 60px;
+
+    line-height: 1.6;
+
+    font-size: 16px;
+
+    color: #526b8d;
+}
+
+
+/* =========================================
+   CARD LINE
+========================================= */
+
+.card-line {
+    width: 48px;
+
+    height: 3px;
+
+    border-radius: 10px;
+
+    margin: 22px 0;
+}
+
+
+.authority .card-line {
+    background: #1769e8;
+}
+
+
+.contractor .card-line {
+    background: #19b47a;
+}
+
+.contractor .continue-button { padding-top: 18px; padding-bottom: 18px; }
+
+
+.public .card-line {
+    background: #7050dc;
+}
+
+
+/* =========================================
+   CONTINUE BUTTON
+========================================= */
+
+.continue-button {
+    width: 100%;
+
+    border: none;
+
+    padding: 14px 20px;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+.continue-button i {
+    transition:
+        transform 0.3s ease;
+}
+
+
+.access-card:hover .continue-button {
+    transform: scale(1.025);
+
+    filter: brightness(1.08);
+}
+
+
+.access-card:hover .continue-button i {
+    transform: translateX(6px);
+}
+
+
+/* Button colors */
+
+.authority .continue-button {
+    background:
+        linear-gradient(
+            90deg,
+            #1769e8,
+            #286fd5
+        );
+}
+
+
+.contractor .continue-button {
+    background:
+        linear-gradient(
+            90deg,
+            #19b47a,
+            #19a970
+        );
+}
+
+
+.public .continue-button {
+    background:
+        linear-gradient(
+            90deg,
+            #7050dc,
+            #6145c7
+        );
+}
+
+
+/* =========================================
+   CARD DECORATION
+========================================= */
+
+.card-decoration {
+    position: absolute;
+
+    right: -20px;
+
+    bottom: -25px;
+
+    font-size: 130px;
+
+    opacity: 0.045;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+
+.access-card:hover .card-decoration {
+    transform:
+        scale(1.1)
+        rotate(-5deg);
+
+    opacity: 0.08;
+}
+
+
+.authority .card-decoration {
+    color: #1769e8;
+}
+
+
+.public .card-decoration {
+    color: #7050dc;
+}
+
+.contractor .card-decoration { color: #19b47a; opacity: 0.08; }
+
+
+/* =========================================
+   FEATURE STRIP
+========================================= */
+
+.feature-strip {
+    max-width: 1000px;
+
+    margin: 55px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 28px;
+}
+
+
+.feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    color: #2b5790;
+
+    font-size: 12px;
+
+    text-align: left;
+}
+
+
+.feature i {
+    font-size: 23px;
+
+    color: #1769e8;
+}
+
+
+.feature strong,
+.feature span {
+    display: block;
+}
+
+
+.feature strong {
+    font-weight: 600;
+}
+
+
+.feature span {
+    margin-top: 3px;
+}
+
+
+.feature-divider {
+    width: 1px;
+
+    height: 35px;
+
+    background: #aec2db;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .header-tagline {
+        display: none;
+    }
+
+    .access-cards {
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+    }
+
+    .access-card {
+        min-height: 400px;
+    }
+
+    .feature-strip {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .emblem {
+        width: 48px;
+
+        border-right: none;
+
+        font-size: 30px;
+    }
+
+    .brand {
+        gap: 10px;
+    }
+
+    .brand-text h1 {
+        font-size: 29px;
+    }
+
+    .brand-text p {
+        font-size: 12px;
+    }
+
+    .main-container {
+        margin-top: 25px;
+
+        padding:
+            0 18px 40px;
+    }
+
+    .welcome-label p {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
+    .welcome-label span {
+        width: 30px;
+    }
+
+    .welcome-section h2 {
+        font-size: 31px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .access-card {
+        padding: 27px;
+
+        min-height: 390px;
+    }
+
+    .feature-strip {
+        gap: 20px;
+
+        margin-top: 40px;
+    }
+
+    .feature-divider {
+        display: none;
+    }
+}

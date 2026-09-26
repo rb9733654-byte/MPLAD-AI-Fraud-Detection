@@ -4,6 +4,14 @@ MPLAD AI Fraud Detection is a local prototype for monitoring fictional MPLAD-sty
 
 > The included dataset and database seed records are fictional/demo data. Anomaly outputs are review signals only; they do not prove, confirm, or determine fraud.
 
+## Run the project on Windows
+
+For a clean, shareable archive, double-click `Create-Project-Zip.bat` in this folder. Send the generated `MPLAD-AI-Fraud-Detection-shareable-*.zip`; it leaves out this computer's database files, credentials, virtual environment, uploads, logs, and build output.
+
+On the receiving computer, install a Java Development Kit (JDK) 17 or later, Python 3, and MySQL 8 with its command-line client. Start the MySQL Server, extract the ZIP, connect to the internet for the first setup, and double-click `Start-Project.bat`. Enter a MySQL account with permission to create and update the demo database when prompted. The script creates or updates the demo schema, installs the AI packages, starts the database-connected backend and the two web services in separate windows, then opens the Access page at `http://localhost:5500/Access.html`.
+
+Keep the three service windows open while using the app. Closing them stops the app services. The startup script accepts MySQL on port 3306 or 3307 and uses the detected port for the backend; no local `application.properties` file or machine-specific path is needed.
+
 ## Project overview
 
 The application presents project allocation, expenditure, completion, delay, and contractor-pattern information in a dashboard. A reviewer can request an on-demand AI analysis for a project. The backend maps the project record to the model's required numerical features, calls the local AI service, and returns an anomaly status, anomaly score, risk level, and model output without persisting the result to MySQL.

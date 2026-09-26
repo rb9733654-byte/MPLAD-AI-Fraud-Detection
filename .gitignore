@@ -1,5 +1,7 @@
 # Java / Maven (Spring Boot)
 backend/mplad-backend/target/
+backend/mplad-backend/.maven-home/
+backend/mplad-backend/uploads/
 *.class
 *.jar
 *.war
@@ -9,6 +11,7 @@ hs_err_pid*
 
 # Python / FastAPI / scikit-learn
 ai-model/.venv/
+ai-model/__pycache__/
 venv/
 .venv/
 env/
@@ -31,6 +34,8 @@ dist/
 .env
 .env.*
 !.env.example
+mysql-data/
+.local-home/
 backend/mplad-backend/src/main/resources/application.properties
 backend/mplad-backend/src/main/resources/application-local.properties
 backend/mplad-backend/src/main/resources/application-local.yml

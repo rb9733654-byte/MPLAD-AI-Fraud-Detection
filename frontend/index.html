@@ -3,167 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="MPLAD Monitor is a demo monitoring interface for identifying potential implementation risks in MPLAD projects."
-    />
-    <title>MPLAD Monitor | AI-Assisted Project Oversight</title>
+    <meta name="description" content="Choose an access role for the MPLAD Project Monitoring prototype." />
+    <title>Access Portal | MPLAD Project Monitoring</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=login-green-1" />
   </head>
-  <body class="landing-page">
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="MPLAD Monitor home"
-        ><span class="brand-mark" aria-hidden="true">M</span
-        ><span>MPLAD <strong>Monitor</strong></span></a
-      >
-      <nav class="primary-nav" aria-label="Main navigation">
-        <a href="#overview">Overview</a><a href="#features">Capabilities</a
-        ><a href="#workflow">How it works</a>
-      </nav>
-      <a class="button button-small" href="dashboard.html"
-        >View dashboard <span aria-hidden="true">→</span></a
-      >
+  <body class="access-page">
+    <header class="site-header access-header">
+      <a class="brand" href="index.html" aria-label="MPLAD Project Monitoring access"><span class="brand-mark" aria-hidden="true">M</span><span>MPLAD <strong>Project Monitoring</strong></span></a>
+      <span class="access-header-label">Monitoring portal · Prototype</span>
     </header>
-
-    <main>
-      <section class="hero" id="overview">
-        <div class="hero-copy">
-          <p class="eyebrow">MPLAD scheme monitoring • demo interface</p>
-          <h1>Clearer oversight for <em>every</em> public project.</h1>
-          <p class="hero-text">
-            MPLAD Monitor brings project, budget, and delivery signals into one
-            focused workspace—helping reviewing teams spot possible anomalies,
-            delays, and inefficiencies sooner.
-          </p>
-          <div class="hero-actions">
-            <a class="button" href="dashboard.html"
-              >Explore the dashboard <span aria-hidden="true">→</span></a
-            ><a class="text-link" href="#workflow">See how it works</a>
-          </div>
-          <p class="demo-note">
-            Current screens use illustrative demo data. Analysis will be powered
-            by connected systems in a future release.
-          </p>
-        </div>
-        <div class="hero-panel" aria-label="Illustrative monitoring summary">
-          <div class="panel-topline">
-            <span>Portfolio health</span><span class="live-dot">Demo data</span>
-          </div>
-          <div class="health-score">
-            <span>72</span><small>/ 100<br />review index</small>
-          </div>
-          <div class="mini-bars" aria-hidden="true">
-            <i style="height: 38%"></i><i style="height: 51%"></i
-            ><i style="height: 43%"></i><i style="height: 72%"></i
-            ><i style="height: 58%"></i><i style="height: 86%"></i
-            ><i style="height: 64%"></i>
-          </div>
-          <div class="panel-footer">
-            <span><b>8</b> items need review</span
-            ><span>Updated: sample snapshot</span>
-          </div>
-        </div>
+    <main class="access-main">
+      <section class="access-intro">
+        <p class="eyebrow">MPLAD project oversight</p>
+        <h1>Welcome to the<br /><em>monitoring portal.</em></h1>
+        <p>Choose the workspace that matches how you participate in project monitoring.</p>
+        <div class="access-principle"><span aria-hidden="true">✓</span><span>Evidence-led monitoring<br /><small>AI signals support human review.</small></span></div>
       </section>
-
-      <section class="trust-strip" aria-label="System focus areas">
-        <span>Designed for transparent review</span><span>•</span
-        ><span>Project-level visibility</span><span>•</span
-        ><span>Evidence-led follow-up</span>
-      </section>
-
-      <section class="content-section" id="features">
-        <div class="section-heading">
-          <p class="eyebrow">What it supports</p>
-          <h2>One view of the signals that matter.</h2>
-          <p>
-            A practical foundation for programme teams to prioritise review—not
-            a replacement for human investigation or audit.
-          </p>
-        </div>
-        <div class="feature-grid">
-          <article>
-            <span class="feature-icon">01</span>
-            <h3>Portfolio monitoring</h3>
-            <p>
-              Track project status, allocations, expenditure, and delivery
-              across locations and categories.
-            </p>
-          </article>
-          <article>
-            <span class="feature-icon">02</span>
-            <h3>Risk prioritisation</h3>
-            <p>
-              Surface projects with sample risk levels so review effort can be
-              directed where it is most needed.
-            </p>
-          </article>
-          <article>
-            <span class="feature-icon">03</span>
-            <h3>Anomaly review</h3>
-            <p>
-              Bring expenditure variance, delay, and pattern alerts together in
-              a single review queue.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="workflow-section" id="workflow">
-        <div class="section-heading">
-          <p class="eyebrow">How the platform will work</p>
-          <h2>From records to a more informed review.</h2>
-        </div>
-        <ol class="workflow-list">
-          <li>
-            <span>01</span>
-            <div>
-              <h3>Connect programme data</h3>
-              <p>
-                Project records, fund allocation, expenditure and progress data
-                will be securely supplied through the planned REST API.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span>02</span>
-            <div>
-              <h3>Assess meaningful signals</h3>
-              <p>
-                A future AI service can evaluate data patterns and return
-                explainable risk indicators for reviewer attention.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span>03</span>
-            <div>
-              <h3>Review and act</h3>
-              <p>
-                Monitoring teams review flagged records, inspect the supporting
-                information, and follow established governance processes.
-              </p>
-            </div>
-          </li>
-        </ol>
-      </section>
-
-      <section class="cta-section">
-        <p class="eyebrow">Ready to explore?</p>
-        <h2>See the monitoring workspace.</h2>
-        <a class="button button-light" href="dashboard.html"
-          >Open demo dashboard <span aria-hidden="true">→</span></a
-        >
+      <section class="access-card" aria-labelledby="accessTitle">
+        <div class="access-card-heading"><p class="eyebrow">Portal access</p><h2 id="accessTitle">Select your role</h2><p>Continue to the relevant project workspace.</p></div>
+        <form id="accessForm" novalidate>
+          <fieldset class="role-options"><legend class="sr-only">Choose an access role</legend>
+            <label class="role-option"><input type="radio" name="role" value="authority" /><span class="role-option-icon" aria-hidden="true">A</span><span><b>Authority / Administrator</b><small>Monitor projects, funds, signals and reviews</small></span><span class="role-radio" aria-hidden="true"></span></label>
+            <label class="role-option"><input type="radio" name="role" value="contractor" /><span class="role-option-icon" aria-hidden="true">C</span><span><b>Contractor</b><small>Submit progress and respond to actions</small></span><span class="role-radio" aria-hidden="true"></span></label>
+            <label class="role-option"><input type="radio" name="role" value="public" /><span class="role-option-icon" aria-hidden="true">P</span><span><b>Public / Citizen</b><small>View public project information</small></span><span class="role-radio" aria-hidden="true"></span></label>
+          </fieldset>
+          <p id="accessError" class="access-error" role="alert" hidden></p>
+          <button class="button access-submit" type="submit">Continue to workspace <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="prototype-note">Sign in or register on the dedicated role access page. This prototype does not provide official government authentication.</p>
       </section>
     </main>
-    <footer class="site-footer">
-      <span>© 2026 MPLAD Monitor • Hackathon prototype</span
-      ><span>Built for responsible public-sector oversight</span>
-    </footer>
+    <footer class="access-footer"><span>MPLAD Project Monitoring · Demonstration</span><span>AI-generated results are monitoring signals and do not confirm fraud.</span></footer>
+    <script src="login.js"></script>
   </body>
 </html>

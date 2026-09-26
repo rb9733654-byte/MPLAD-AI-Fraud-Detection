@@ -3,8 +3,12 @@ package com.mplad.fraud_detection.controller;
 import java.util.List;
 
 import com.mplad.fraud_detection.dto.AiPredictionResponse;
+import com.mplad.fraud_detection.dto.FundUtilizationResponse;
+import com.mplad.fraud_detection.dto.ProjectHistoryResponse;
 import com.mplad.fraud_detection.entity.Project;
 import com.mplad.fraud_detection.service.ProjectAnalysisService;
+import com.mplad.fraud_detection.service.FundUtilizationService;
+import com.mplad.fraud_detection.service.ProjectHistoryService;
 import com.mplad.fraud_detection.service.ProjectService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,18 +27,29 @@ import org.springframework.web.bind.annotation.RestController;
         "http://localhost:3000",
         "http://localhost:5173",
         "http://localhost:5500",
+        "http://localhost:5502",
         "http://localhost:8000",
         "http://127.0.0.1:5500",
+        "http://127.0.0.1:5502",
         "http://127.0.0.1:8000"
-})
+}, allowCredentials = "true")
 public class ProjectController {
 
     private final ProjectService projectService;
     private final ProjectAnalysisService projectAnalysisService;
+    private final ProjectHistoryService projectHistoryService;
+    private final FundUtilizationService fundUtilizationService;
 
-    public ProjectController(ProjectService projectService, ProjectAnalysisService projectAnalysisService) {
+    public ProjectController(
+            ProjectService projectService,
+            ProjectAnalysisService projectAnalysisService,
+            ProjectHistoryService projectHistoryService,
+            FundUtilizationService fundUtilizationService
+    ) {
         this.projectService = projectService;
         this.projectAnalysisService = projectAnalysisService;
+        this.projectHistoryService = projectHistoryService;
+        this.fundUtilizationService = fundUtilizationService;
     }
 
     @GetMapping
@@ -52,6 +67,16 @@ public class ProjectController {
     @PostMapping("/{id}/analyze")
     public AiPredictionResponse analyzeProject(@PathVariable Long id) {
         return projectAnalysisService.analyzeProject(id);
+    }
+
+    @GetMapping("/{id}/history")
+    public List<ProjectHistoryResponse> getProjectHistory(@PathVariable Long id) {
+        return projectHistoryService.getHistory(id);
+    }
+
+    @GetMapping("/{id}/fund-utilization")
+    public FundUtilizationResponse getFundUtilization(@PathVariable Long id) {
+        return fundUtilizationService.getProjectUtilization(id);
     }
 
     @GetMapping("/district/{district}")

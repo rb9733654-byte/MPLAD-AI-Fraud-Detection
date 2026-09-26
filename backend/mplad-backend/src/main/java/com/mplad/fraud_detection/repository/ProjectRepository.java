@@ -12,4 +12,8 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
     List<Project> findByProjectType(String projectType);
 
     List<Project> findByIsCompleted(Boolean isCompleted);
+
+    List<Project> findByContractorIdOrderByProjectIdAsc(String contractorId);
+
+    boolean existsByContractorId(String contractorId);
 }

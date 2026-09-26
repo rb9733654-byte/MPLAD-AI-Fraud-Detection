@@ -28,6 +28,19 @@ public class Project {
     @Column(name = "district", nullable = false, length = 120)
     private String district;
 
+    /** Fictional demo geography used only for portfolio-level aggregation. */
+    @Column(name = "state", nullable = false, length = 120)
+    private String state;
+
+    @Column(name = "contractor_id", nullable = false, length = 50)
+    private String contractorId;
+
+    @Column(name = "latitude", precision = 10, scale = 7)
+    private BigDecimal latitude;
+
+    @Column(name = "longitude", precision = 10, scale = 7)
+    private BigDecimal longitude;
+
     @Column(name = "project_type", nullable = false, length = 80)
     private String projectType;
 
@@ -63,6 +76,12 @@ public class Project {
 
     @Column(name = "is_completed", nullable = false)
     private Boolean isCompleted;
+
+    @Column(name = "last_analysis_score", precision = 5, scale = 2)
+    private BigDecimal lastAnalysisScore;
+
+    @Column(name = "last_analysis_level", length = 20)
+    private String lastAnalysisLevel;
 
     // These values are assigned by MySQL defaults and the ON UPDATE rule.
     @Column(name = "created_at", nullable = false, insertable = false, updatable = false)
@@ -105,6 +124,21 @@ public class Project {
     public void setDistrict(String district) {
         this.district = district;
     }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getContractorId() { return contractorId; }
+    public void setContractorId(String contractorId) { this.contractorId = contractorId; }
+    public BigDecimal getLatitude() { return latitude; }
+    public void setLatitude(BigDecimal latitude) { this.latitude = latitude; }
+    public BigDecimal getLongitude() { return longitude; }
+    public void setLongitude(BigDecimal longitude) { this.longitude = longitude; }
 
     public String getProjectType() {
         return projectType;
@@ -201,6 +235,11 @@ public class Project {
     public void setIsCompleted(Boolean isCompleted) {
         this.isCompleted = isCompleted;
     }
+
+    public BigDecimal getLastAnalysisScore() { return lastAnalysisScore; }
+    public void setLastAnalysisScore(BigDecimal lastAnalysisScore) { this.lastAnalysisScore = lastAnalysisScore; }
+    public String getLastAnalysisLevel() { return lastAnalysisLevel; }
+    public void setLastAnalysisLevel(String lastAnalysisLevel) { this.lastAnalysisLevel = lastAnalysisLevel; }
 
     public LocalDateTime getCreatedAt() {
         return createdAt;

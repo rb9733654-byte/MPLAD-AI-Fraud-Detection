@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MPLADS Analytics | Login</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Login.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- ================= BACKGROUND ================= -->
+
+        <div class="background"></div>
+        <div class="background-overlay"></div>
+
+
+        <!-- ================= NAVBAR ================= -->
+
+        <header class="navbar">
+
+            <!-- Government Logo -->
+            <div class="government-brand">
+
+                <div class="emblem">
+                    <i class="fa-solid fa-landmark"></i>
+                </div>
+
+                <div class="brand-text">
+                    <h2>Government Analytics Portal</h2>
+
+                    <p>
+                        Transparent
+                        <span>•</span>
+                        Accountable
+                        <span>•</span>
+                        Efficient
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="nav-links">
+
+                <a href="#" class="active">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Help</a>
+
+            </nav>
+
+
+            <!-- MPLADS Logo -->
+            <div class="mplads-brand">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <div>
+                    <h2>MPLADS Analytics</h2>
+                    <p>Better Insights. Stronger India.</p>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content">
+
+
+            <!-- ================= LEFT SECTION ================= -->
+
+            <section class="hero-section">
+
+                <div class="hero-label">
+                    MONITOR
+                    <span>|</span>
+                    ANALYZE
+                    <span>|</span>
+                    EMPOWER
+                </div>
+
+
+                <h1>
+                    Track MPLADS Funds.
+                    <br>
+
+                    <span>Build a Better Tomorrow.</span>
+                </h1>
+
+
+                <p class="hero-description">
+                    AI/ML driven platform to monitor, analyze and ensure
+                    the effective utilization of MPLADS funds for a
+                    transparent and developed India.
+                </p>
+
+
+                <!-- Features -->
+
+                <div class="features">
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <h3>Real-time</h3>
+                        <p>Monitoring</p>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <h3>Fraud &</h3>
+                        <p>Anomaly Detection</p>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+
+                        <h3>Data Driven</h3>
+                        <p>Insights</p>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+
+                        <h3>Transparent</h3>
+                        <p>Governance</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= LOGIN CARD ================= -->
+
+            <section class="login-card">
+
+
+                <!-- Login Header -->
+
+                <div class="login-header">
+
+                    <div class="user-icon">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+
+                    <div>
+                        <h2>LOGIN TO YOUR</h2>
+                        <h2>ACCOUNT</h2>
+
+                        <p>
+                            Access your dashboard and manage
+                            MPLADS data securely.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Login Form -->
+
+                <form id="loginForm">
+
+
+                    <!-- Username -->
+
+                    <div class="input-group">
+
+                        <label for="username">
+                            <i class="fa-regular fa-user"></i>
+                            Username
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="username"
+                                placeholder="Enter your username"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="input-group">
+
+                        <label for="email">
+                            <i class="fa-regular fa-envelope"></i>
+                            Email Address
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email address"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="input-group">
+
+                        <label for="password">
+                            <i class="fa-solid fa-lock"></i>
+                            Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="eye-btn"
+                                id="togglePassword"
+                            >
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Login Button -->
+
+                    <button
+                        type="submit"
+                        class="login-btn"
+                    >
+
+                        <span>LOGIN</span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </form>
+
+
+                <!-- Sign Up -->
+
+                <div class="signup">
+
+                    <span>Don't have an account?</span>
+
+                    <a href="#" id="showSignup">
+                        Sign Up Now
+                    </a>
+
+                </div>
+
+            </section>
+
+            <section class="login-card" id="signupCard" hidden>
+                <div class="login-header"><div class="user-icon"><i class="fa-solid fa-user-plus"></i></div><div><h2>CREATE YOUR</h2><h2>ACCOUNT</h2><p>Create an account first, then sign in to access the dashboard.</p></div></div>
+                <form id="signupForm">
+                    <div class="input-group"><label for="signupUsername"><i class="fa-regular fa-user"></i> Username</label><div class="input-box"><i class="fa-regular fa-user"></i><input id="signupUsername" name="username" required minlength="3" maxlength="50" placeholder="Choose a username"></div></div>
+                    <div class="input-group"><label for="signupEmail"><i class="fa-regular fa-envelope"></i> Email Address</label><div class="input-box"><i class="fa-regular fa-envelope"></i><input id="signupEmail" name="email" type="email" required maxlength="254" placeholder="Enter your email address"></div></div>
+                    <div class="input-group"><label for="signupPassword"><i class="fa-solid fa-lock"></i> Password</label><div class="input-box"><i class="fa-solid fa-lock"></i><input id="signupPassword" name="password" type="password" required minlength="8" maxlength="72" placeholder="At least 8 characters"></div></div>
+                    <div class="input-group"><label for="signupConfirm"><i class="fa-solid fa-lock"></i> Confirm Password</label><div class="input-box"><i class="fa-solid fa-lock"></i><input id="signupConfirm" name="confirmPassword" type="password" required minlength="8" maxlength="72" placeholder="Re-enter your password"></div></div>
+                    <p id="authMessage" role="alert" style="color:#b42318;font-size:13px;margin:0 0 12px" hidden></p>
+                    <button type="submit" class="login-btn"><span>CREATE ACCOUNT</span><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <div class="signup"><span>Already have an account?</span><a href="#" id="showLogin">Login</a></div>
+            </section>
+
+        </main>
+
+
+        <!-- ================= TRICOLOR DESIGN ================= -->
+
+        <div class="tricolor">
+
+            <div class="saffron"></div>
+            <div class="white"></div>
+            <div class="green"></div>
+
+        </div>
+
+    <!-- JavaScript -->
+    <script src="Login.js"></script>
+
+</body>
+
+</html>

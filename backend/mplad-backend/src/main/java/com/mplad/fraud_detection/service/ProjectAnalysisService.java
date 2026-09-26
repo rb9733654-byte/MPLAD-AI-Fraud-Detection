@@ -21,7 +21,11 @@ public class ProjectAnalysisService {
     public AiPredictionResponse analyzeProject(Long projectId) {
         Project project = projectRepository.findById(projectId)
                 .orElseThrow(() -> new ProjectNotFoundException(projectId));
-        return pythonAnomalyClient.predict(AiPredictionRequest.from(project));
+        AiPredictionResponse result = pythonAnomalyClient.predict(AiPredictionRequest.from(project));
+        project.setLastAnalysisScore(result.anomalyScore());
+        project.setLastAnalysisLevel(result.riskLevel());
+        projectRepository.save(project);
+        return result;
     }
 
     public static class ProjectNotFoundException extends RuntimeException {

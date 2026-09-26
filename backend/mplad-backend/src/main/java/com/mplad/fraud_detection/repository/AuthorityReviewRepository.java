@@ -1,0 +1,1 @@
+package com.mplad.fraud_detection.repository; import java.util.List; import com.mplad.fraud_detection.entity.AuthorityReview; import org.springframework.data.jpa.repository.JpaRepository; public interface AuthorityReviewRepository extends JpaRepository<AuthorityReview,Long>{List<AuthorityReview> findByProjectIdOrderByReviewDateDesc(Long id);}

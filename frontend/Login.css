@@ -1,0 +1,1161 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   ROOT
+========================================= */
+
+:root {
+
+    --dark-green: #064e3b;
+    --green: #087f5b;
+    --light-green: #dff5eb;
+
+    --white: #ffffff;
+
+    --text-dark: #12372d;
+    --text-gray: #60736c;
+
+    --saffron: #ff9933;
+
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #ffffff;
+
+    color: var(--text-dark);
+
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.page {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.background {
+    position: absolute;
+    inset: 0;
+    background-image:url("Goverment_Parliament.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -3;
+}
+
+/* =========================================
+   BACKGROUND OVERLAY
+========================================= */
+
+.background-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.94) 0%,
+            rgba(255, 255, 255, 0.86) 38%,
+            rgba(255, 255, 255, 0.62) 62%,
+            rgba(255, 255, 255, 0.88) 100%
+        );
+
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    height: 105px;
+
+    padding: 0 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-bottom: 1px solid
+        rgba(6, 78, 59, 0.08);
+
+}
+
+
+/* =========================================
+   GOVERNMENT BRAND
+========================================= */
+
+.government-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.emblem {
+
+    width: 52px;
+
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--dark-green);
+
+    font-size: 39px;
+
+}
+
+
+.brand-text h2 {
+
+    font-size: 20px;
+
+    color: var(--dark-green);
+
+    margin-bottom: 5px;
+
+}
+
+
+.brand-text p {
+
+    font-size: 12px;
+
+    color: #63776f;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.brand-text span {
+
+    margin: 0 7px;
+
+    color: var(--saffron);
+
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 45px;
+
+}
+
+
+.nav-links a {
+
+    position: relative;
+
+    text-decoration: none;
+
+    color: #21443a;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    padding: 10px 0;
+
+}
+
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 3px;
+
+    border-radius: 5px;
+
+    background: var(--green);
+
+    transition: 0.3s;
+
+}
+
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+
+    width: 100%;
+
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+
+    color: var(--green);
+
+}
+
+
+/* =========================================
+   MPLADS BRAND
+========================================= */
+
+.mplads-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.mplads-brand > i {
+
+    font-size: 35px;
+
+    color: var(--green);
+
+}
+
+
+.mplads-brand h2 {
+
+    font-size: 18px;
+
+    color: var(--dark-green);
+
+}
+
+
+.mplads-brand p {
+
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    color: #657a71;
+
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+
+    min-height:
+        calc(100vh - 105px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        55px 7% 100px;
+
+    gap: 60px;
+
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+
+    width: 55%;
+
+    max-width: 680px;
+
+}
+
+
+.hero-label {
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: var(--green);
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero-label span {
+
+    margin: 0 10px;
+
+    color: var(--saffron);
+
+}
+
+
+.hero-section h1 {
+
+    font-size: clamp(38px, 4vw, 60px);
+
+    line-height: 1.1;
+
+    color: var(--dark-green);
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero-section h1 span {
+
+    color: var(--green);
+
+}
+
+
+.hero-description {
+
+    max-width: 560px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #536b62;
+
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.features {
+
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 45px;
+
+}
+
+
+.feature {
+
+    min-width: 105px;
+
+}
+
+
+.feature-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 2px solid
+        rgba(8, 127, 91, 0.35);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--green);
+
+    margin-bottom: 10px;
+
+    transition: 0.3s;
+
+}
+
+
+.feature:hover .feature-icon {
+
+    background: var(--green);
+
+    color: white;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(8, 127, 91, 0.2);
+
+}
+
+
+.feature h3 {
+
+    font-size: 12px;
+
+    color: var(--dark-green);
+
+}
+
+
+.feature p {
+
+    font-size: 11px;
+
+    color: #667b73;
+
+    margin-top: 3px;
+
+}
+
+
+/* =========================================
+   LOGIN CARD
+========================================= */
+
+.login-card {
+
+    width: 440px;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    padding: 38px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(6, 78, 59, 0.18);
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+/* =========================================
+   LOGIN HEADER
+========================================= */
+
+.login-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.user-icon {
+
+    min-width: 62px;
+
+    height: 62px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 27px;
+
+}
+
+
+.login-header h2 {
+
+    font-size: 25px;
+
+    line-height: 1.05;
+
+    color: var(--dark-green);
+
+}
+
+
+.login-header p {
+
+    margin-top: 10px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: #71837c;
+
+}
+
+
+/* =========================================
+   INPUT GROUP
+========================================= */
+
+.input-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+.input-group label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: var(--dark-green);
+
+    margin-bottom: 8px;
+
+}
+
+
+.input-group label i {
+
+    color: var(--green);
+
+}
+
+
+/* =========================================
+   INPUT BOX
+========================================= */
+
+.input-box {
+
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 17px;
+
+    border: 1px solid #d7e3de;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+
+    transition: 0.3s;
+
+}
+
+
+.input-box > i {
+
+    color: #739087;
+
+    margin-right: 12px;
+
+}
+
+
+.input-box input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+
+    color: var(--text-dark);
+
+}
+
+
+.input-box input::placeholder {
+
+    color: #9aaba5;
+
+}
+
+
+.input-box:focus-within {
+
+    border-color: var(--green);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(8, 127, 91, 0.08);
+
+}
+
+
+/* =========================================
+   PASSWORD EYE
+========================================= */
+
+.eye-btn {
+
+    border: none;
+
+    background: transparent;
+
+    color: #647a72;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+}
+
+
+.eye-btn:hover {
+
+    color: var(--green);
+
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.login-btn {
+
+    width: 100%;
+
+    height: 55px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087f5b,
+            #065f46
+        );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+.login-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(8, 127, 91, 0.25);
+
+}
+
+
+.login-btn i {
+
+    transition: 0.3s;
+
+}
+
+
+.login-btn:hover i {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================
+   SIGN UP
+========================================= */
+
+.signup {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 23px;
+
+    font-size: 12px;
+
+    color: #74857e;
+
+}
+
+
+.signup a {
+
+    color: var(--green);
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+}
+
+
+.signup a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================
+   TRICOLOR
+========================================= */
+
+.tricolor {
+
+    position: absolute;
+
+    right: 27%;
+
+    bottom: 65px;
+
+    width: 380px;
+
+    height: 85px;
+
+    transform:
+        rotate(-8deg);
+
+    z-index: -1;
+
+    opacity: 0.9;
+
+}
+
+
+.tricolor div {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+}
+
+
+.tricolor .saffron {
+
+    background: var(--saffron);
+
+    top: 0;
+
+}
+
+
+.tricolor .white {
+
+    background: white;
+
+    top: 14px;
+
+}
+
+
+.tricolor .green {
+
+    background: var(--green);
+
+    top: 28px;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    position: absolute;
+
+    left: 5%;
+
+    right: 5%;
+
+    bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.footer-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.footer-item > i {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(8, 127, 91, 0.4);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--green);
+
+}
+
+
+.footer-item div {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.footer-item strong {
+
+    font-size: 10px;
+
+    color: var(--dark-green);
+
+}
+
+
+.footer-item span {
+
+    font-size: 9px;
+
+    color: #667a72;
+
+    margin-top: 3px;
+
+}
+
+
+.footer-divider {
+
+    width: 1px;
+
+    height: 35px;
+
+    background: #cbdad4;
+
+}
+
+
+.footer-tag {
+
+    margin-left: auto;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #6c8178;
+
+}
+
+
+.footer-tag span {
+
+    margin: 0 7px;
+
+    color: var(--saffron);
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+
+        padding: 0 4%;
+
+    }
+
+    .main-content {
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+
+    }
+
+    .hero-section {
+
+        width: 50%;
+
+    }
+
+    .login-card {
+
+        width: 390px;
+
+    }
+
+    .footer {
+
+        display: none;
+
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .navbar {
+
+        height: auto;
+
+        padding: 20px;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+
+    }
+
+    .nav-links {
+
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+    .main-content {
+
+        flex-direction: column;
+
+        padding-top: 50px;
+
+        padding-bottom: 50px;
+
+    }
+
+    .hero-section {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+    .hero-description {
+
+        margin: auto;
+
+    }
+
+    .features {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+    .login-card {
+
+        width: 100%;
+
+        max-width: 440px;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .government-brand {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+    .mplads-brand {
+
+        display: none;
+
+    }
+
+    .nav-links {
+
+        gap: 25px;
+
+    }
+
+    .hero-section h1 {
+
+        font-size: 35px;
+
+    }
+
+    .hero-description {
+
+        font-size: 14px;
+
+    }
+
+    .features {
+
+        gap: 15px;
+
+    }
+
+    .login-card {
+
+        padding: 28px 22px;
+
+    }
+
+    .login-header h2 {
+
+        font-size: 21px;
+
+    }
+
+}
